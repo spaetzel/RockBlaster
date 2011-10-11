@@ -24,6 +24,5 @@ typedef struct
 	char* messages[MAX_MESSAGES]; /* The messages */
 }CoinMessages;
 
-#include "GameInterface.h"
 
 #endif

@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include <GLUT/glut.h>
+#include <stdlib.h>
 
 #include "GlobalDefines.h"
 #include "PolygonTypes.h"
@@ -159,7 +160,6 @@ static int Cmp_Hi(const void *a, const void *b)
 	int i, n; n = 1; 
 	for(i=n+1; i<Nb; ++i) 
 	{ 
-		int Tmp; 
 		// search where to insert point #i into the chain Ind[0..n] 
 		while(n-->0) 
 			if ( Angle( Pts[Ind[i]], Pts[Ind[n]], Pts[Ind[n+1]] ) > 0.0 ) 

@@ -8,6 +8,8 @@
 ********************************************************************/
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "GlobalDefines.h"
 #include "HiScoreTypes.h"
@@ -82,7 +84,7 @@ void sortScores ( HighScores* hiScores )
 int loadScores(char* f1, HighScores* hiScores)
 { 
 	FILE *fd1; /* File pointer */
-	int i, j; /*Counters */
+	int i; /*Counters */
 	int numScores; /* the number of scores in the file*/
 	if ((fd1 = fopen(f1,"r")) == NULL) {
 		return -1 ;

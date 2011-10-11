@@ -15,6 +15,7 @@
 #include <GLUT/glut.h>
 #include "GlobalDefines.h"
 #include "GameTypes.h"
+#include "GameInterface.h"
 
 /* <main>
  Input: int argc - the number of arguments passed
@@ -30,7 +31,7 @@ int main(int argc,char* argv[])
 	char* fontFile = "font.dat";
 	char* scoresFile = "scores.txt";
 	
-	srand ( time(NULL) );
+	srand ( (unsigned int)time(NULL) );
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
 	glutInitWindowSize(SIZ_X,SIZ_Y);

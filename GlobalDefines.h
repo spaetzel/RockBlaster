@@ -9,6 +9,8 @@
 #ifndef GLOBAL_DEFINES
 #define GLOBAL_DEFINES
 
+#define FPS 60 // How many frames to draw in a second
+
 #define MAX_VERTICES 255 /* The maximum number of vertices in a polygon */
 
 #define SIZ_X       800
@@ -52,7 +54,7 @@
 #define  ROCK_VERTEX      16       /* Max. number of vertices for each rock */
 #define  MAX_ROCKS       140                     /* Maximum number of rocks */
 #define  ACCEL_STEPS      20                 /* Acceleration steps for ship */
-#define AS_SPEED_RATIO 4 /* The amount to multiply size by to get max speed */
+#define AS_SPEED_RATIO 300 /* The amount to multiply size by to get max speed */
 #define MAX_EXPLODE_SPEED 2
 #define EXPLOSION_LIFE 25
 
@@ -62,13 +64,13 @@
 #define	MESSAGE_DELAY	30	
 
 /* Ship defines */
-#define ACCEL 1 /* The acceleraton factor of the ship */
+#define ACCEL 50 /* The acceleraton factor of the ship */
 #define DRAG .999 /* How much the ship slows down due to drag */
 
-#define SM_ROTATE 0.1 /* How much to rotate when tapping the key */
-#define LG_ROTATE 0.3  /* How much to rotate the ship in one step */
+#define SM_ROTATE 5 /* How much to rotate when tapping the key */
+#define LG_ROTATE 10  /* How much to rotate the ship in one step */
 #define RANGE 0.2 /* how close to a 90 degree to round */
-#define MAX_SHIP_SPEED 24
+#define MAX_SHIP_SPEED 500
 #define SPAWN_TIME 	30 /* How many frames until the ship can come back to life*/
 #define HYPERSPACE_TIME	15 /* how many frames before the ship reapears from hyperspace */
 

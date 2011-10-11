@@ -109,7 +109,7 @@ void createAsteroidGroup( AsteroidGroup* asteroids, GLint numAsteroids,
  Output: int The number of asteroids still alive
  Updates the location of all the asteroids based on their direction and speed
 */
-int updateAsteroids(AsteroidGroup* asteroids)
+int updateAsteroids(AsteroidGroup* asteroids, double_t timePassed)
 
 { 
 	int i, asteroidsLeft;
@@ -123,8 +123,8 @@ int updateAsteroids(AsteroidGroup* asteroids)
 			{
 				asteroidsLeft++;
 			
-				asteroids->rocks[i].translation.x += asteroids->rocks[i].direction.x*asteroids->rocks[i].speed ;
-				asteroids->rocks[i].translation.y += asteroids->rocks[i].direction.y*asteroids->rocks[i].speed ;
+				asteroids->rocks[i].translation.x += asteroids->rocks[i].direction.x*asteroids->rocks[i].speed*timePassed;
+				asteroids->rocks[i].translation.y += asteroids->rocks[i].direction.y*asteroids->rocks[i].speed*timePassed;
 
 				/* Wrap the asteroids around the screen */
 				x = asteroids->rocks[i].translation.x ; 

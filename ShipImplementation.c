@@ -30,7 +30,7 @@ void resetShip (Ship *theShip)
 	theShip->flameOn = TRUE;
 }
 
-void updateShip (Ship *theShip, AsteroidGroup* asteroids)
+void updateShip (Ship *theShip, AsteroidGroup* asteroids, double_t secondsPassed)
 {
 	GLpoint newDir;
 	GLfloat x, y ;
@@ -52,11 +52,11 @@ void updateShip (Ship *theShip, AsteroidGroup* asteroids)
 
 					if (theShip->rotating > 0)
 					{
-						theShip->rotating = LG_ROTATE;
+						theShip->rotating = LG_ROTATE*secondsPassed;
 					}
 					else
 					{
-						theShip->rotating = -LG_ROTATE;
+						theShip->rotating = -LG_ROTATE*secondsPassed;
 					}	
 			}
 		}
@@ -66,8 +66,8 @@ void updateShip (Ship *theShip, AsteroidGroup* asteroids)
 		if (theShip->accelerating == TRUE)
 			speedUpShip (theShip);
 	
-		theShip->translation.x += theShip->direction.x;
-		theShip->translation.y += theShip->direction.y;
+		theShip->translation.x += theShip->direction.x*secondsPassed;
+		theShip->translation.y += theShip->direction.y*secondsPassed;
 		x = theShip->translation.x ; 
 		y = theShip->translation.y ;
 		
@@ -85,8 +85,8 @@ void updateShip (Ship *theShip, AsteroidGroup* asteroids)
 		}
 	
 		// The drag 
-		newDir.x = theShip->direction.x * DRAG;
-		newDir.y = theShip->direction.y * DRAG;
+		newDir.x = theShip->direction.x * DRAG * secondsPassed;
+		newDir.y = theShip->direction.y * DRAG * secondsPassed;
 	
 		theShip->direction = newDir;
 	}
@@ -253,7 +253,6 @@ Polygon* getShipConvexHull ( Ship* theShip)
 {
 	int i;
 	int* pointsInHull = (int*) malloc ( MAX_VERTICES * sizeof (int) );
-	int numHullVertices;
 	Polygon allVertices;
 	Polygon* hull = (Polygon*) malloc ( sizeof ( Polygon) );
 	

@@ -16,7 +16,7 @@
 #include "BulletTypes.h"
 #include "PolygonTypes.h"
 #include "GameTypes.h"
-
+#include "MathInterface.h"
 
 /* checkBoundingBox
  Input:	Asteroid* theAst The asteroid to be	checked	against
@@ -29,14 +29,13 @@
 
 int	checkBoundingBox (Asteroid*	theAst,	 GLpoint pointA, GLpoint pointB)
 {
-	int	i; /* Counter */
 	int	astMaxX, astMaxY, astMinX, astMinY;	/* The coordinates of the asteroids	bounding box */
 	GLfloat	maxX, maxY,	minX, minY;	/* The extremes	of the two points */
 	
-	maxX = max (pointA.x, pointB.x);
-	minX = min (pointA.x, pointB.x);
-	maxY = max (pointA.y, pointB.y);
-	minY = min (pointA.y, pointB.y);
+	maxX = rmax (pointA.x, pointB.x);
+	minX = rmin (pointA.x, pointB.x);
+	maxY = rmax (pointA.y, pointB.y);
+	minY = rmin (pointA.y, pointB.y);
 	
 
 	if (theAst->alive)

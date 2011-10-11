@@ -14,7 +14,7 @@
 #include "ShipTypes.h"
 
 void resetShip (Ship *theShip);
-void updateShip (Ship *theShip, AsteroidGroup* asteroids);
+void updateShip (Ship *theShip, AsteroidGroup* asteroids, double timePassed);
 
 void accelerateShip (Ship *theShip);
 void turnShipLeft (Ship *theShip);

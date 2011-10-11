@@ -18,7 +18,7 @@
 
 void createAsteroidGroup( AsteroidGroup* asteroids, GLint numAsteroids, 
 	Polygon shapes[], GLint numShapes, Ship* theShip);
-int updateAsteroids (AsteroidGroup*);
+int updateAsteroids (AsteroidGroup*, double);
 void displayAsteroids(AsteroidGroup* asteroids);
 
 int splitAsteroid (AsteroidGroup* asteroids, BulletGroup* explosionParts, Asteroid* theRock);

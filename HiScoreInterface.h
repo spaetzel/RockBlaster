@@ -17,4 +17,7 @@ void sortScores ( HighScores* hiScores );
 int saveScores(HighScores* hiScores);
 void displayInitials(char initials[NUM_INITIALS], Polygon* theFont);
 void displayHiScores ( HighScores* hiScores, Polygon* theFont);
+void insertHiScore ( Player thePlayer, HighScores* hiScores);
+
+
 #endif

@@ -13,6 +13,7 @@
 #include <time.h>
 #include <GLUT/glut.h>
 
+#include "GameInterface.h"
 
 #include "GameTypes.h" 
 #include "CollisionInterface.h"
@@ -43,7 +44,7 @@ BulletGroup explosionParts; 		// The flying pixels for all the current explosion
 Player thePlayer;
 HighScores hiScores;
 
-int modeDelay;	/* How long to stay in the current mode - used for HELP and GAME_OVER */
+double_t modeDelay;	/* How long to stay in the current mode - used for HELP and GAME_OVER */
 
 GameMode currentMode;
 GameMode previousMode;
@@ -58,29 +59,7 @@ void myInit()
 	glPointSize (2);
 }
 
-int min ( GLfloat one, GLfloat two)
-{
-	if ( one < two )
-	{
-		return one;
-	}
-	else
-	{ 	
-		return two;
-	}
-}
-
-int max ( GLfloat one, GLfloat two)
-{
-	if ( one > two )
-	{
-		return one;
-	}
-	else
-	{ 	
-		return two;
-	}
-}
+	
 
 void resetGame ()
 {
@@ -225,7 +204,7 @@ void resetLevel(int level)
 	
 	if (currentMode == PLAYING)
 	asteroids.timeLeftToSpawn = LEVEL_DELAY_TIME;
-printf ("reset");
+
 	createBullets ( &bullets );
 	createBullets ( &explosionParts);
 }
@@ -259,13 +238,19 @@ int lastDisplayed = 0;
 
 void updateDisplay()
 {
-    if( lastDisplayed == 0 || clock() > lastDisplayed + 0.02 * CLOCKS_PER_SEC )
+    clock_t ticks = clock();
+    double_t ticksPerSec = CLOCKS_PER_SEC;
+     double_t ticksPassed = ticks - lastDisplayed;
+    double_t secondsPassed = ticksPassed/CLOCKS_PER_SEC;
+    
+    if( lastDisplayed == 0 || secondsPassed > 1.0/FPS )
     {
        
+        
 	int asteroidsLeft;
 	if (currentMode == PLAYING || currentMode == INSERT_COIN || currentMode == GAME_OVER)
 	{
-		asteroidsLeft = updateAsteroids(&asteroids);
+		asteroidsLeft = updateAsteroids(&asteroids, secondsPassed);
 		
 		updateBullets (&explosionParts);
 	}
@@ -280,7 +265,7 @@ void updateDisplay()
 		{
 			hiScores.maxHi = thePlayer.score;
 		}
-		updateShip(&theShip, &asteroids);
+		updateShip(&theShip, &asteroids, secondsPassed);
 		updateBullets (&bullets);
 		
 		
@@ -296,7 +281,7 @@ void updateDisplay()
 		}
 	} else if ( currentMode == INSERT_COIN || currentMode == SCORE_TABLE)
 	{
-		coinMessage.timeToNextMessage--;
+		coinMessage.timeToNextMessage-= secondsPassed;
 		if ( coinMessage.timeToNextMessage <= 0)
 		{
 			coinMessage.timeToNextMessage = MESSAGE_DELAY;
@@ -304,7 +289,7 @@ void updateDisplay()
 			if (coinMessage.currentMessage >= coinMessage.numMessages)
 				coinMessage.currentMessage = 0;
 		}
-		modeDelay--;
+		modeDelay-= secondsPassed;
 		
 			
 		if (modeDelay <= 0)
@@ -322,14 +307,14 @@ void updateDisplay()
 		
 	} else if (  currentMode == HELP)
 	{
-		modeDelay--;
+		modeDelay-= secondsPassed;
 		if (modeDelay <= 0)
 		{
 			switchGameMode ( previousMode );
 		}
 	} else if (  currentMode == GAME_OVER)
 	{
-		modeDelay--;
+		modeDelay-= secondsPassed;
 		if (modeDelay <= 0)
 		{
 			if ( thePlayer.score > hiScores.minHi || hiScores.numScores < MAX_SCORES)

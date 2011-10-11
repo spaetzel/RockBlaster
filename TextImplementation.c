@@ -1,3 +1,6 @@
+
+#include <string.h>
+
 #include "TextTypes.h"
 #include "TextInterface.h"
 #include "GlobalDefines.h"
