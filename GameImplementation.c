@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <math.h>
+#include <time.h>
 #include <GLUT/glut.h>
 
 
@@ -254,10 +255,13 @@ int checkCollisions()
 	return shipCollideVal + bulletCollideVal;
 }
 
-		
+int lastDisplayed = 0;
+
 void updateDisplay()
 {
-
+    if( lastDisplayed == 0 || clock() > lastDisplayed + 0.02 * CLOCKS_PER_SEC )
+    {
+       
 	int asteroidsLeft;
 	if (currentMode == PLAYING || currentMode == INSERT_COIN || currentMode == GAME_OVER)
 	{
@@ -338,7 +342,9 @@ void updateDisplay()
 		}
 	} 
 		
+        lastDisplayed = clock();
 	glutPostRedisplay();
+    }
 }
 
 void playingSpecialKeyboard(int theKey, int mouseX, int mouseY)

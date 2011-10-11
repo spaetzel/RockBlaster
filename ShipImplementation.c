@@ -185,7 +185,7 @@ void rotateShip (Ship *theShip, GLfloat rotation)
 	
 	/* Round the angle to any of the 90 degrees, since the user likely would want
 	to be facing that direction if they are within RANGE radians of the angle */
-/*	if (inRangeOf (newRot, 0, RANGE) )
+    if (inRangeOf (newRot, 0, RANGE) )
 		newRot = 0;
 	else if (inRangeOf (newRot, PI/2, RANGE) )
 		newRot = PI/2;
@@ -193,8 +193,7 @@ void rotateShip (Ship *theShip, GLfloat rotation)
 		newRot = PI;
 	else if (inRangeOf ( newRot, PI + PI/2, RANGE) )
 		newRot = PI + PI/2;
-	else if (inRangeOf (newRot, 2*PI, RANGE) ) */
-	
+	else if (inRangeOf (newRot, 2*PI, RANGE) )	
 		newRot = 2*PI;
 	
 	theShip->rotation = newRot;
