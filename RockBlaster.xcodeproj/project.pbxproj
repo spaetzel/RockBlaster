@@ -1,0 +1,407 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		631FD2381443D10C00F8CC58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631FD2371443D10C00F8CC58 /* Cocoa.framework */; };
+		631FD2421443D10C00F8CC58 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2401443D10C00F8CC58 /* InfoPlist.strings */; };
+		631FD2481443D10C00F8CC58 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2461443D10C00F8CC58 /* Credits.rtf */; };
+		631FD24B1443D10C00F8CC58 /* RockBlasterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FD24A1443D10C00F8CC58 /* RockBlasterAppDelegate.m */; };
+		631FD24E1443D10C00F8CC58 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631FD24C1443D10C00F8CC58 /* MainMenu.xib */; };
+		631FD2531443D27600F8CC58 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631FD2521443D27600F8CC58 /* GLUT.framework */; };
+		631FD2551443D27D00F8CC58 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 631FD2541443D27D00F8CC58 /* OpenGL.framework */; };
+		631FD2571443D2BF00F8CC58 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2561443D2BF00F8CC58 /* main.c */; };
+		631FD2641443D49700F8CC58 /* ShipImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2631443D49700F8CC58 /* ShipImplementation.c */; };
+		631FD28B1443D4A300F8CC58 /* PlayerImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2671443D4A300F8CC58 /* PlayerImplementation.c */; };
+		631FD28C1443D4A300F8CC58 /* PolygonImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2681443D4A300F8CC58 /* PolygonImplementation.c */; };
+		631FD28D1443D4A300F8CC58 /* MathImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD26A1443D4A300F8CC58 /* MathImplementation.c */; };
+		631FD28E1443D4A300F8CC58 /* GameImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD26C1443D4A300F8CC58 /* GameImplementation.c */; };
+		631FD2901443D4A300F8CC58 /* AsteroidImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD26F1443D4A300F8CC58 /* AsteroidImplementation.c */; };
+		631FD2931443D4A300F8CC58 /* BulletImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2731443D4A300F8CC58 /* BulletImplementation.c */; };
+		631FD2941443D4A300F8CC58 /* CollisionImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2761443D4A300F8CC58 /* CollisionImplementation.c */; };
+		631FD2971443D4A300F8CC58 /* HiScoreImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD27D1443D4A300F8CC58 /* HiScoreImplementation.c */; };
+		631FD2981443D4A300F8CC58 /* TextImplementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2861443D4A300F8CC58 /* TextImplementation.c */; };
+		631FD2991443D4A300F8CC58 /* makefile in Sources */ = {isa = PBXBuildFile; fileRef = 631FD2891443D4A300F8CC58 /* makefile */; };
+		631FD2A41443D6F900F8CC58 /* flame.dat in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2A01443D6F900F8CC58 /* flame.dat */; };
+		631FD2A51443D6F900F8CC58 /* font.dat in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2A11443D6F900F8CC58 /* font.dat */; };
+		631FD2A61443D6F900F8CC58 /* rocks.dat in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2A21443D6F900F8CC58 /* rocks.dat */; };
+		631FD2A71443D6F900F8CC58 /* ship.dat in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2A31443D6F900F8CC58 /* ship.dat */; };
+		631FD2A91443D7A900F8CC58 /* scores.txt in Resources */ = {isa = PBXBuildFile; fileRef = 631FD2A81443D7A800F8CC58 /* scores.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		631FD2331443D10C00F8CC58 /* RockBlaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RockBlaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		631FD2371443D10C00F8CC58 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		631FD23A1443D10C00F8CC58 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		631FD23B1443D10C00F8CC58 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		631FD23C1443D10C00F8CC58 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		631FD23F1443D10C00F8CC58 /* RockBlaster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RockBlaster-Info.plist"; sourceTree = "<group>"; };
+		631FD2411443D10C00F8CC58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		631FD2451443D10C00F8CC58 /* RockBlaster-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RockBlaster-Prefix.pch"; sourceTree = "<group>"; };
+		631FD2471443D10C00F8CC58 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		631FD2491443D10C00F8CC58 /* RockBlasterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RockBlasterAppDelegate.h; sourceTree = "<group>"; };
+		631FD24A1443D10C00F8CC58 /* RockBlasterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RockBlasterAppDelegate.m; sourceTree = "<group>"; };
+		631FD24D1443D10C00F8CC58 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		631FD2521443D27600F8CC58 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = DEVELOPER_DIR; };
+		631FD2541443D27D00F8CC58 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		631FD2561443D2BF00F8CC58 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		631FD2581443D2F500F8CC58 /* main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		631FD2631443D49700F8CC58 /* ShipImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShipImplementation.c; sourceTree = "<group>"; };
+		631FD2661443D4A300F8CC58 /* MathInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathInterface.h; sourceTree = "<group>"; };
+		631FD2671443D4A300F8CC58 /* PlayerImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PlayerImplementation.c; sourceTree = "<group>"; };
+		631FD2681443D4A300F8CC58 /* PolygonImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = PolygonImplementation.c; sourceTree = "<group>"; };
+		631FD2691443D4A300F8CC58 /* PolygonTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonTypes.h; sourceTree = "<group>"; };
+		631FD26A1443D4A300F8CC58 /* MathImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = MathImplementation.c; sourceTree = "<group>"; };
+		631FD26B1443D4A300F8CC58 /* GameInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameInterface.h; sourceTree = "<group>"; };
+		631FD26C1443D4A300F8CC58 /* GameImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GameImplementation.c; sourceTree = "<group>"; };
+		631FD26E1443D4A300F8CC58 /* AsteroidTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsteroidTypes.h; sourceTree = "<group>"; };
+		631FD26F1443D4A300F8CC58 /* AsteroidImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AsteroidImplementation.c; sourceTree = "<group>"; };
+		631FD2711443D4A300F8CC58 /* AsteroidInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsteroidInterface.h; sourceTree = "<group>"; };
+		631FD2731443D4A300F8CC58 /* BulletImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BulletImplementation.c; sourceTree = "<group>"; };
+		631FD2741443D4A300F8CC58 /* BulletInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletInterface.h; sourceTree = "<group>"; };
+		631FD2751443D4A300F8CC58 /* BulletTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletTypes.h; sourceTree = "<group>"; };
+		631FD2761443D4A300F8CC58 /* CollisionImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CollisionImplementation.c; sourceTree = "<group>"; };
+		631FD2771443D4A300F8CC58 /* CollisionInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionInterface.h; sourceTree = "<group>"; };
+		631FD2791443D4A300F8CC58 /* CollisionTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionTypes.h; sourceTree = "<group>"; };
+		631FD27B1443D4A300F8CC58 /* GameTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameTypes.h; sourceTree = "<group>"; };
+		631FD27C1443D4A300F8CC58 /* GlobalDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefines.h; sourceTree = "<group>"; };
+		631FD27D1443D4A300F8CC58 /* HiScoreImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = HiScoreImplementation.c; sourceTree = "<group>"; };
+		631FD27E1443D4A300F8CC58 /* HiScoreInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiScoreInterface.h; sourceTree = "<group>"; };
+		631FD27F1443D4A300F8CC58 /* HiScoreTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HiScoreTypes.h; sourceTree = "<group>"; };
+		631FD2801443D4A300F8CC58 /* MathTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathTypes.h; sourceTree = "<group>"; };
+		631FD2811443D4A300F8CC58 /* PlayerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerInterface.h; sourceTree = "<group>"; };
+		631FD2821443D4A300F8CC58 /* PlayerTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTypes.h; sourceTree = "<group>"; };
+		631FD2831443D4A300F8CC58 /* PolygonInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolygonInterface.h; sourceTree = "<group>"; };
+		631FD2841443D4A300F8CC58 /* ShipInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipInterface.h; sourceTree = "<group>"; };
+		631FD2851443D4A300F8CC58 /* ShipTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShipTypes.h; sourceTree = "<group>"; };
+		631FD2861443D4A300F8CC58 /* TextImplementation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TextImplementation.c; sourceTree = "<group>"; };
+		631FD2871443D4A300F8CC58 /* TextInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextInterface.h; sourceTree = "<group>"; };
+		631FD2881443D4A300F8CC58 /* TextTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextTypes.h; sourceTree = "<group>"; };
+		631FD2891443D4A300F8CC58 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		631FD2A01443D6F900F8CC58 /* flame.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flame.dat; sourceTree = "<group>"; };
+		631FD2A11443D6F900F8CC58 /* font.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = font.dat; sourceTree = "<group>"; };
+		631FD2A21443D6F900F8CC58 /* rocks.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rocks.dat; sourceTree = "<group>"; };
+		631FD2A31443D6F900F8CC58 /* ship.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ship.dat; sourceTree = "<group>"; };
+		631FD2A81443D7A800F8CC58 /* scores.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = scores.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		631FD2301443D10C00F8CC58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631FD2551443D27D00F8CC58 /* OpenGL.framework in Frameworks */,
+				631FD2531443D27600F8CC58 /* GLUT.framework in Frameworks */,
+				631FD2381443D10C00F8CC58 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		631FD2261443D0CE00F8CC58 = {
+			isa = PBXGroup;
+			children = (
+				631FD2A81443D7A800F8CC58 /* scores.txt */,
+				631FD2A01443D6F900F8CC58 /* flame.dat */,
+				631FD2A11443D6F900F8CC58 /* font.dat */,
+				631FD2A21443D6F900F8CC58 /* rocks.dat */,
+				631FD2A31443D6F900F8CC58 /* ship.dat */,
+				631FD2561443D2BF00F8CC58 /* main.c */,
+				631FD2661443D4A300F8CC58 /* MathInterface.h */,
+				631FD2671443D4A300F8CC58 /* PlayerImplementation.c */,
+				631FD2681443D4A300F8CC58 /* PolygonImplementation.c */,
+				631FD2691443D4A300F8CC58 /* PolygonTypes.h */,
+				631FD26A1443D4A300F8CC58 /* MathImplementation.c */,
+				631FD26B1443D4A300F8CC58 /* GameInterface.h */,
+				631FD26C1443D4A300F8CC58 /* GameImplementation.c */,
+				631FD26E1443D4A300F8CC58 /* AsteroidTypes.h */,
+				631FD26F1443D4A300F8CC58 /* AsteroidImplementation.c */,
+				631FD2711443D4A300F8CC58 /* AsteroidInterface.h */,
+				631FD2731443D4A300F8CC58 /* BulletImplementation.c */,
+				631FD2741443D4A300F8CC58 /* BulletInterface.h */,
+				631FD2751443D4A300F8CC58 /* BulletTypes.h */,
+				631FD2761443D4A300F8CC58 /* CollisionImplementation.c */,
+				631FD2771443D4A300F8CC58 /* CollisionInterface.h */,
+				631FD2791443D4A300F8CC58 /* CollisionTypes.h */,
+				631FD27B1443D4A300F8CC58 /* GameTypes.h */,
+				631FD27C1443D4A300F8CC58 /* GlobalDefines.h */,
+				631FD27D1443D4A300F8CC58 /* HiScoreImplementation.c */,
+				631FD27E1443D4A300F8CC58 /* HiScoreInterface.h */,
+				631FD27F1443D4A300F8CC58 /* HiScoreTypes.h */,
+				631FD2801443D4A300F8CC58 /* MathTypes.h */,
+				631FD2811443D4A300F8CC58 /* PlayerInterface.h */,
+				631FD2821443D4A300F8CC58 /* PlayerTypes.h */,
+				631FD2831443D4A300F8CC58 /* PolygonInterface.h */,
+				631FD2841443D4A300F8CC58 /* ShipInterface.h */,
+				631FD2851443D4A300F8CC58 /* ShipTypes.h */,
+				631FD2861443D4A300F8CC58 /* TextImplementation.c */,
+				631FD2871443D4A300F8CC58 /* TextInterface.h */,
+				631FD2881443D4A300F8CC58 /* TextTypes.h */,
+				631FD2891443D4A300F8CC58 /* makefile */,
+				631FD2631443D49700F8CC58 /* ShipImplementation.c */,
+				631FD2581443D2F500F8CC58 /* main.h */,
+				631FD2541443D27D00F8CC58 /* OpenGL.framework */,
+				631FD2521443D27600F8CC58 /* GLUT.framework */,
+				631FD23D1443D10C00F8CC58 /* RockBlaster */,
+				631FD2361443D10C00F8CC58 /* Frameworks */,
+				631FD2341443D10C00F8CC58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		631FD2341443D10C00F8CC58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				631FD2331443D10C00F8CC58 /* RockBlaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		631FD2361443D10C00F8CC58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				631FD2371443D10C00F8CC58 /* Cocoa.framework */,
+				631FD2391443D10C00F8CC58 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		631FD2391443D10C00F8CC58 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				631FD23A1443D10C00F8CC58 /* AppKit.framework */,
+				631FD23B1443D10C00F8CC58 /* CoreData.framework */,
+				631FD23C1443D10C00F8CC58 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		631FD23D1443D10C00F8CC58 /* RockBlaster */ = {
+			isa = PBXGroup;
+			children = (
+				631FD2491443D10C00F8CC58 /* RockBlasterAppDelegate.h */,
+				631FD24A1443D10C00F8CC58 /* RockBlasterAppDelegate.m */,
+				631FD24C1443D10C00F8CC58 /* MainMenu.xib */,
+				631FD23E1443D10C00F8CC58 /* Supporting Files */,
+			);
+			path = RockBlaster;
+			sourceTree = "<group>";
+		};
+		631FD23E1443D10C00F8CC58 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				631FD23F1443D10C00F8CC58 /* RockBlaster-Info.plist */,
+				631FD2401443D10C00F8CC58 /* InfoPlist.strings */,
+				631FD2451443D10C00F8CC58 /* RockBlaster-Prefix.pch */,
+				631FD2461443D10C00F8CC58 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		631FD2321443D10C00F8CC58 /* RockBlaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631FD24F1443D10C00F8CC58 /* Build configuration list for PBXNativeTarget "RockBlaster" */;
+			buildPhases = (
+				631FD22F1443D10C00F8CC58 /* Sources */,
+				631FD2301443D10C00F8CC58 /* Frameworks */,
+				631FD2311443D10C00F8CC58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RockBlaster;
+			productName = RockBlaster;
+			productReference = 631FD2331443D10C00F8CC58 /* RockBlaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		631FD2281443D0CE00F8CC58 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 631FD22B1443D0CE00F8CC58 /* Build configuration list for PBXProject "RockBlaster" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 631FD2261443D0CE00F8CC58;
+			productRefGroup = 631FD2341443D10C00F8CC58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				631FD2321443D10C00F8CC58 /* RockBlaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		631FD2311443D10C00F8CC58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631FD2421443D10C00F8CC58 /* InfoPlist.strings in Resources */,
+				631FD2481443D10C00F8CC58 /* Credits.rtf in Resources */,
+				631FD24E1443D10C00F8CC58 /* MainMenu.xib in Resources */,
+				631FD2A41443D6F900F8CC58 /* flame.dat in Resources */,
+				631FD2A51443D6F900F8CC58 /* font.dat in Resources */,
+				631FD2A61443D6F900F8CC58 /* rocks.dat in Resources */,
+				631FD2A71443D6F900F8CC58 /* ship.dat in Resources */,
+				631FD2A91443D7A900F8CC58 /* scores.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		631FD22F1443D10C00F8CC58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				631FD24B1443D10C00F8CC58 /* RockBlasterAppDelegate.m in Sources */,
+				631FD2571443D2BF00F8CC58 /* main.c in Sources */,
+				631FD2641443D49700F8CC58 /* ShipImplementation.c in Sources */,
+				631FD28B1443D4A300F8CC58 /* PlayerImplementation.c in Sources */,
+				631FD28C1443D4A300F8CC58 /* PolygonImplementation.c in Sources */,
+				631FD28D1443D4A300F8CC58 /* MathImplementation.c in Sources */,
+				631FD28E1443D4A300F8CC58 /* GameImplementation.c in Sources */,
+				631FD2901443D4A300F8CC58 /* AsteroidImplementation.c in Sources */,
+				631FD2931443D4A300F8CC58 /* BulletImplementation.c in Sources */,
+				631FD2941443D4A300F8CC58 /* CollisionImplementation.c in Sources */,
+				631FD2971443D4A300F8CC58 /* HiScoreImplementation.c in Sources */,
+				631FD2981443D4A300F8CC58 /* TextImplementation.c in Sources */,
+				631FD2991443D4A300F8CC58 /* makefile in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		631FD2401443D10C00F8CC58 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				631FD2411443D10C00F8CC58 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		631FD2461443D10C00F8CC58 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				631FD2471443D10C00F8CC58 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		631FD24C1443D10C00F8CC58 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				631FD24D1443D10C00F8CC58 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		631FD22D1443D0CE00F8CC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		631FD22E1443D0CE00F8CC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		631FD2501443D10C00F8CC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RockBlaster/RockBlaster-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "RockBlaster/RockBlaster-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		631FD2511443D10C00F8CC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RockBlaster/RockBlaster-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "RockBlaster/RockBlaster-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		631FD22B1443D0CE00F8CC58 /* Build configuration list for PBXProject "RockBlaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631FD22D1443D0CE00F8CC58 /* Debug */,
+				631FD22E1443D0CE00F8CC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		631FD24F1443D10C00F8CC58 /* Build configuration list for PBXNativeTarget "RockBlaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				631FD2501443D10C00F8CC58 /* Debug */,
+				631FD2511443D10C00F8CC58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 631FD2281443D0CE00F8CC58 /* Project object */;
+}
