@@ -15,7 +15,7 @@
 
 void createBullets (BulletGroup* bullets);
 int fireBullet (BulletGroup* bullets, Ship *theShip);
-void updateBullets (BulletGroup* bullets);
+void updateBullets (BulletGroup* bullets, double secondsPassed);
 void displayBullets(BulletGroup* bullets);
 void createBullet (BulletGroup* bullets, GLpoint translation, GLpoint direction, GLfloat lifeLeft);
 

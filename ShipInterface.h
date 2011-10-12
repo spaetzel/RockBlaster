@@ -17,8 +17,8 @@ void resetShip (Ship *theShip);
 void updateShip (Ship *theShip, AsteroidGroup* asteroids, double timePassed);
 
 void accelerateShip (Ship *theShip);
-void turnShipLeft (Ship *theShip);
-void turnShipRight (Ship *theShip);
+void turnShipLeft (Ship *theShip, double secondsPassed);
+void turnShipRight (Ship *theShip, double secondsPassed);
 void rotateShip (Ship *theShip, GLfloat rotation);
 void displayShip (Ship* theShip);
 void stopShipTurn (Ship *theShip);

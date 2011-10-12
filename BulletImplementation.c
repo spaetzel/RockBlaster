@@ -116,7 +116,7 @@ Updates teh posion of all the bullets using their direction, as well as checking
 to see if any bullets have expired, removing the ones which have
 */
 
-void updateBullets (BulletGroup* bullets)
+void updateBullets (BulletGroup* bullets, double secondsPassed)
 {
 	int i;
 	GLfloat x, y ;
@@ -124,7 +124,7 @@ void updateBullets (BulletGroup* bullets)
 	{
 		if ( bullets->bullet[i].lifeLeft > 0)
 		{
-			bullets->bullet[i].lifeLeft -= REMOVE_LIFE;
+			bullets->bullet[i].lifeLeft -= REMOVE_LIFE*secondsPassed;
 			/* If we just killed the bullet */
 			if (bullets->bullet[i].lifeLeft <= 0)
 			{
@@ -135,8 +135,8 @@ void updateBullets (BulletGroup* bullets)
 			{
 				/* The bullet is alive, update it */
 
-				bullets->bullet[i].translation.x += bullets->bullet[i].direction.x;
-				bullets->bullet[i].translation.y += bullets->bullet[i].direction.y;
+				bullets->bullet[i].translation.x += bullets->bullet[i].direction.x*secondsPassed;
+				bullets->bullet[i].translation.y += bullets->bullet[i].direction.y*secondsPassed;
 
 				/* Wrapping */
 				x = bullets->bullet[i].translation.x ; 

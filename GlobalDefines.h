@@ -44,19 +44,19 @@
 
 #define MAX_STORE_BULLETS 255
 #define MAX_BULLETS 4
-#define MAX_LIFE  13
+#define MAX_LIFE  1.5
 #define REMOVE_LIFE 1
-#define BULLET_SPEED 34
+#define BULLET_SPEED 340
 
 
 /* Asteroid defines */
 #define  SHIP_VERTEX       6               /* Number of vertices a ship has */
 #define  ROCK_VERTEX      16       /* Max. number of vertices for each rock */
 #define  MAX_ROCKS       140                     /* Maximum number of rocks */
-#define  ACCEL_STEPS      20                 /* Acceleration steps for ship */
-#define AS_SPEED_RATIO 300 /* The amount to multiply size by to get max speed */
-#define MAX_EXPLODE_SPEED 2
-#define EXPLOSION_LIFE 25
+#define  ACCEL_STEPS      14                 /* Acceleration steps for ship */
+#define AS_SPEED_RATIO 200 /* The amount to multiply size by to get max speed */
+#define MAX_EXPLODE_SPEED 1
+#define EXPLOSION_LIFE 2
 
 /* Game defines */
 #define MAX_SCORES 10
@@ -67,12 +67,12 @@
 #define ACCEL 50 /* The acceleraton factor of the ship */
 #define DRAG .999 /* How much the ship slows down due to drag */
 
-#define SM_ROTATE 5 /* How much to rotate when tapping the key */
-#define LG_ROTATE 10  /* How much to rotate the ship in one step */
+#define SM_ROTATE 0.00047 /* How much to rotate when tapping the key */
+#define LG_ROTATE 0.3  /* How much to rotate the ship in one step */
 #define RANGE 0.2 /* how close to a 90 degree to round */
 #define MAX_SHIP_SPEED 500
-#define SPAWN_TIME 	30 /* How many frames until the ship can come back to life*/
-#define HYPERSPACE_TIME	15 /* how many frames before the ship reapears from hyperspace */
+#define SPAWN_TIME 	3 /* How many seconds until the ship can come back to life*/
+#define HYPERSPACE_TIME	0.5 /* how many seconds before the ship reapears from hyperspace */
 
 /* Alien defines */
 #define NUM_ALIENS 2

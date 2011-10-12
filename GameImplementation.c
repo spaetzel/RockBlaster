@@ -15,7 +15,7 @@
 
 #include "GameInterface.h"
 
-#include "GameTypes.h" 
+//#include "GameTypes.h" 
 #include "CollisionInterface.h"
 #include "GlobalDefines.h"
 #include "AsteroidTypes.h"
@@ -234,7 +234,7 @@ int checkCollisions()
 	return shipCollideVal + bulletCollideVal;
 }
 
-int lastDisplayed = 0;
+time_t lastDisplayed = 0;
 
 void updateDisplay()
 {
@@ -252,7 +252,7 @@ void updateDisplay()
 	{
 		asteroidsLeft = updateAsteroids(&asteroids, secondsPassed);
 		
-		updateBullets (&explosionParts);
+		updateBullets (&explosionParts, secondsPassed);
 	}
 	
 	if (  currentMode == PLAYING)
@@ -266,7 +266,7 @@ void updateDisplay()
 			hiScores.maxHi = thePlayer.score;
 		}
 		updateShip(&theShip, &asteroids, secondsPassed);
-		updateBullets (&bullets);
+		updateBullets (&bullets, secondsPassed);
 		
 		
 		if (asteroidsLeft == 0)
@@ -332,7 +332,7 @@ void updateDisplay()
     }
 }
 
-void playingSpecialKeyboard(int theKey, int mouseX, int mouseY)
+void playingSpecialKeyboard(int theKey, int mouseX, int mouseY, double secondsPassed)
 {
 	switch(theKey)
 	{
@@ -342,10 +342,10 @@ void playingSpecialKeyboard(int theKey, int mouseX, int mouseY)
 		case GLUT_KEY_DOWN:
 			break;
 		case GLUT_KEY_LEFT:
-			turnShipLeft ( &theShip );
+			turnShipLeft ( &theShip , secondsPassed);
 			break;
 		case GLUT_KEY_RIGHT:
-			turnShipRight ( &theShip );
+			turnShipRight ( &theShip, secondsPassed );
 			break;
 		default:
 			break;

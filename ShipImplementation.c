@@ -47,7 +47,7 @@ void updateShip (Ship *theShip, AsteroidGroup* asteroids, double_t secondsPassed
 			/* Set the rotation to the large value This is so that the
 			player can rotate a small amount by tapping 
 			the key and a large amount by holding it down */
-			if (abs(theShip->rotating) != LG_ROTATE)
+	/*		if (abs(theShip->rotating) != LG_ROTATE)
 			{
 
 					if (theShip->rotating > 0)
@@ -59,8 +59,10 @@ void updateShip (Ship *theShip, AsteroidGroup* asteroids, double_t secondsPassed
 						theShip->rotating = -LG_ROTATE*secondsPassed;
 					}	
 			}
+     */
 		}
-						
+			
+			
 				
 	
 		if (theShip->accelerating == TRUE)
@@ -85,10 +87,13 @@ void updateShip (Ship *theShip, AsteroidGroup* asteroids, double_t secondsPassed
 		}
 	
 		// The drag 
-		newDir.x = theShip->direction.x * DRAG * secondsPassed;
+/*		newDir.x = theShip->direction.x * DRAG * secondsPassed;
 		newDir.y = theShip->direction.y * DRAG * secondsPassed;
-	
-		theShip->direction = newDir;
+ 
+ 
+ theShip->direction = newDir;
+ 
+*/	
 	}
 	else
 	{ 
@@ -143,20 +148,20 @@ void speedUpShip (Ship *theShip)
 }
 
 
-void turnShipLeft (Ship *theShip)
+void turnShipLeft (Ship *theShip, double secondsPassed)
 {
 	if (theShip->rotating >= 0.0)
 	{
-		theShip->rotating = -SM_ROTATE;
+		theShip->rotating = -SM_ROTATE*secondsPassed;
 	}
 	
 }
 
-void turnShipRight (Ship *theShip)
+void turnShipRight (Ship *theShip, double secondsPassed)
 {
 	if (theShip->rotating <= 0.0)
 	{
-		theShip->rotating = SM_ROTATE;
+		theShip->rotating = SM_ROTATE * secondsPassed;
 	}
 	
 }

@@ -12,7 +12,7 @@ void myDisplay();
 void myReshape(int w, int h);
 void resetLevel(int level);
 void updateDisplay();
-void playingSpecialKeyboard(int theKey, int mouseX, int mouseY);
+void playingSpecialKeyboard(int theKey, int mouseX, int mouseY, double secondsPassed);
 void playingSpecialKeyboardUp(int theKey, int mouseX, int mouseY);
 void playingKeyboard(unsigned char theKey, int mouseX, int mouseY);
 void helpKeyboard (unsigned char theKey, int mouseX, int mouseY);
